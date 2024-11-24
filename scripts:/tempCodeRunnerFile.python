@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the cleaned data
+sales = pd.read_csv("/Users/sanjojoy/Desktop/GIt_repositories/Sales forecasting/data/cleaned_sales_data.csv", index_col="date", parse_dates=True)
+
+# Plot the sales data
+plt.figure(figsize=(12, 6))
+plt.plot(sales.index, sales['sales'], label="Sales")
+plt.title("Daily Sales")
+plt.xlabel("Date")
+plt.ylabel("Sales")
+plt.legend()
+plt.show()
